@@ -24,10 +24,10 @@ class Slow_Servo:
     def _move(self):
         if self.tics_togo > 0:
             diff = self.pw_des - self.pw_cur
-            self.pw_cur += int(diff / self.tics_togo)
+            self.pw_cur += diff / self.tics_togo
             #print(self.pw_cur)
             self.tics_togo -= 1
-            self.pwm.duty_u16(self.pw_cur)
+            self.pwm.duty_u16(int(self.pw_cur))
         
     def set_angle(self, angle, move_ms=0):
         angle = min(180, max(0, int(angle)))
