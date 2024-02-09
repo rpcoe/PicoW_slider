@@ -4,8 +4,8 @@ from time import sleep
 import slow_servo
 import machine
 
-ssid='gh'
-password='Jean&Keith'
+ssid='CoesNest'
+password='4grandkids'
 
 def webpage():
     #Template HTML
